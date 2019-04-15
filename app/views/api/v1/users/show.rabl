@@ -18,3 +18,15 @@ child :sons => :sons do
     attributes :id, :name
   end
 end
+
+node :is_grandparent do
+  @user.parent_id.blank? && @user.sons.present?
+end
+
+node :is_parent do 
+  @user.sons.present? && @user.parent_id.present?
+end
+
+node :is_grandchild do
+  @user.sons.blank?
+end
