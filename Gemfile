@@ -29,6 +29,8 @@ gem 'rack-cors'
 gem 'carrierwave'
 gem 'sidekiq'
 gem 'sidekiq-status'
+gem 'rabl'
+gem 'oj'
 
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
