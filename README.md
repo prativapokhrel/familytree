@@ -6,19 +6,14 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
+  2.5.3
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
+  bundle exec rails db:create 
+  bundle exec rails db:migrate
 
 * Services (job queues, cache servers, search engines, etc.)
+  sidekiq 
 
-* Deployment instructions
-
-* ...
+* For seed 
+  bundle exec rails db:seed
