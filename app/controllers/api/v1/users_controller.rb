@@ -6,12 +6,11 @@ class Api::V1::UsersController < Api::V1::BaseController
   end
   
   def create
-    file = UploadedFile.create(file_name: params[:file])
-    if file.create
+    file = UploadedFile.new(file_name: params[:file])
+    if file.save
       UserWorker.perform_async(file.id)
       render json: { status: :success }
     else 
-      binding.pry 
       render :json => {  status: :error, :errors => file.errors.full_messages }
 
     end 

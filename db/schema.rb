@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_04_13_061649) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "uploaded_files", force: :cascade do |t|
     t.string "file_name"
   end
